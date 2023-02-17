@@ -1,6 +1,21 @@
 Cielo
 =====
 
+Foi realizada uma edição na biblioteca para inclusão do campo soft descriptor que realiza a inclusão do nome na fatura do cliente.
+Então no composer deverá ser adicionado o repositório abaixo e a versão específica para buscar desse repositório git:
+
+"mrprompt/cielo": "1.0.*"
+
+ "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/caetanoiw/cielo",
+      "only": [
+        "mrprompt/cielo"
+      ]
+    }
+  ]
+
 Cielo é uma classe cliente para o web service da Cielo.
 
 Com esta classe, sua aplicação será capaz de realizar transações
