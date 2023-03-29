@@ -417,6 +417,8 @@ class Cliente
      */
     protected function enviaRequisicao(Requisicao $requisicao)
     {
+        $this->httpClient->setSslVerification(false,false);
+
         $request = $this->httpClient->post($this->getEndpoint())
                                     ->addPostFields(array(
                                         'mensagem' => $requisicao->getEnvio()->asXML()
